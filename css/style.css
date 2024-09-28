@@ -1,8 +1,21 @@
 @import 'reset.css';
 
+:root{
+	--black: #101010;
+	--white: #f0f0f0;
+	--gray: #181818;
+}
+
+.light{
+	--black: #f0f0f0;
+	--white: #101010;
+	--gray: #f8f8f8;
+}
+
 body{
-	background-color: #101010;
-	color: #f0f0f0;
+	background-color: var(--black);
+	color: var(--white);
+	transition: all 0.2s ease;
 } 
 
 .wrapper{
@@ -58,8 +71,8 @@ body{
 .main__item {
 	min-width: 200px;
 	min-height: 200px;
-	background-color: #181818;
-	border: 2px solid;
+	background-color: var(--gray);
+	border: 2px solid var(--white);
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -79,6 +92,7 @@ body{
 .main__item img{
 	max-width: 128px;
 	max-height: 128px;
+	/* filter: brightness(6.55%); */
 }
 
 .footer {
