@@ -19,9 +19,12 @@ body{
 } 
 
 .wrapper{
-	min-height: 99.93%;
+	min-height: 100dvh;
+	min-width: 270px;
+	overflow: clip;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 [class*="__container"] {
@@ -34,7 +37,7 @@ body{
 .header{
 	padding: 59px 0px 10px 0px;
 	position: fixed;
-	width: 100%;
+	min-width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 50;
@@ -63,14 +66,16 @@ body{
 	align-items: center;
 }
 .main__container {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 50px;
 }
+
 
 .main__item {
 	min-width: 200px;
 	min-height: 200px;
+	
 	background-color: var(--gray);
 	border: 2px solid var(--white);
 	border-radius: 10px;
@@ -85,14 +90,9 @@ body{
 	transform: scale(0.95);
 }
 
-.main__item:hover img{
-	transform: scale(1);
-}
-
 .main__item img{
 	max-width: 128px;
 	max-height: 128px;
-	/* filter: brightness(6.55%); */
 }
 
 .footer {
@@ -109,7 +109,87 @@ body{
 	justify-content: center;
 }
 .footer__info {
-	width: 48px;
-	height: 48px;
+	max-width: 48px;
+	max-height: 48px;
 	cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+	.header{
+		padding: 35px 0px 10px 0px;
+	}
+	.header__container{
+		display: flex;
+	}
+	.header__theme{
+		max-width: 48px;
+		max-height: 48px;
+	}
+	.header__menu{
+		max-width: 48px;
+		max-height: 48px;
+	}
+	.main__container{
+		grid-template-columns: repeat(4, 1fr);
+		gap: 42px;
+	}
+	.main__item{
+		min-width: 150px;
+		min-height: 150px;
+	}
+	.main__item img{
+		max-width: 96px;
+		max-height: 96px;
+	}
+	.footer{
+		padding: 10px 0px 35px 0px;
+	}
+
+	.footer__info {
+		max-width: 36px;
+		max-height: 36px;
+	}
+}
+
+@media (max-width: 767.9px) {
+	.main__container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 367.9px) {
+	.header{
+		padding: 35px 0px 10px 0px;
+	}
+	.header__container{
+		display: flex;
+	}
+	.header__theme{
+		max-width: 36px;
+		max-height: 36px;
+	}
+	.header__menu{
+		max-width: 36px;
+		max-height: 36px;
+	}
+	.main__container{
+		gap: 18px;
+	}
+	.main__item{
+		min-width: 120px;
+		min-height: 120px;
+	}
+	.main__item img{
+		max-width: 76px;
+		max-height: 76px;
+	}
+	.footer{
+		padding: 10px 0px 35px 0px;
+	}
+
+	.footer__info {
+		max-width: 27px;
+		max-height: 27px;
+	}
 }
