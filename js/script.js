@@ -7,17 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".header__menu");
 	const otherTools = document.querySelector(".header__shell")
 	const info = document.querySelector(".footer__info");
-
-	// Preload functions
-	function preloadImages(...imageUrls) {
-		imageUrls.forEach((url) => {
-				const img = new Image();
-				img.src = url;
-		});
-	}
-
-	// Preloading images
-	preloadImages('../img/icons/moon.svg');
+	
 	// ----------------------------- // 
 
 	// Toggle menu
