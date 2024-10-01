@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Preloading images
-	preloadImages('../img/moon.svg');
+	preloadImages('../img/icons/moon.svg');
 	// ----------------------------- // 
 
 	// Toggle menu
