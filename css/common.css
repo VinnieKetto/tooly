@@ -1,0 +1,34 @@
+:root{
+	--black: #101010;
+	--white: #f0f0f0;
+	--gray: #181818;
+}
+
+.light{
+	--black: #f0f0f0;
+	--white: #101010;
+	--gray: #f8f8f8;
+}
+
+body{
+	font-family: "Fredoka", sans-serif;
+	background-color: var(--black);
+	color: var(--white);
+	transition: all 0.2s ease;
+} 
+
+.wrapper{
+	min-height: 100dvh;
+	min-width: 16.25rem;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+[class*="__container"] {
+	max-width: 60rem;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	margin: 0 auto;
+}

@@ -5,16 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
 	const main = document.querySelector(".main")
 	const mainImages = document.querySelectorAll(".main__item img");
 	const menu = document.querySelector(".header__menu");
-	const menuBody = document.querySelector(".header__shell")
+	const otherTools = document.querySelector(".header__shell")
 	const info = document.querySelector(".footer__info");
-	const infoBlock = document.querySelector(".footer__info-block");
+
+	// Preload functions
+	function preloadImages(...imageUrls) {
+		imageUrls.forEach((url) => {
+				const img = new Image();
+				img.src = url;
+		});
+	}
+
+	// Preloading images
+	preloadImages('../img/moon.svg');
+	// ----------------------------- // 
 
 	// Toggle menu
-	if (menu && menuBody) {
+	if (menu && otherTools) {
 		menu.addEventListener("click", () => {
 			document.body.classList.toggle("lock");
 			menu.classList.toggle("active");
-			menuBody.classList.toggle("active");
+			otherTools.classList.toggle("active");
 			main.classList.toggle("active");
 		});
 	}
@@ -25,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			mainImages.forEach(image => {
 				image.style.filter = brightnessValue;
 			});
-			menu.style.filter = info.style.filter = brightnessValue;
+			menu.style.filter = brightnessValue;
 		};
 
 		icon.addEventListener("click", () => {
@@ -39,14 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				icon.src = "img/icons/sun.svg";
 			}
 		});
-		
-		// Toggle info block
-		if (infoBlock) {
-			info.addEventListener("click", () => {
-				const isHidden = infoBlock.style.transform === "scale(0)";
-				infoBlock.style.transform = isHidden ? "scale(1)" : "scale(0)";
-			});
-		}
 	}
 });
 
