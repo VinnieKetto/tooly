@@ -26,28 +26,32 @@
 		</header>
 		<main class="main">
 			<div class="main__container">
-				<div class="main__item">
+				<div class="main__item" data-tool="to-do">
 					<img src="img/icons/to-do.svg" alt="To-do" 
 					draggable="false" ondragstart="return false;">
 					<p>to-do</p>
 				</div>
-				<div class="main__item">
+				<div class="main__item" data-tool="stopwatch">
 					<img src="img/icons/stopwatch.svg" alt="Stopwatch" 
 					draggable="false" ondragstart="return false;">
 					<p>Stopwatch</p>
 				</div>
-				<div class="main__item">
+				<div class="main__item" data-tool="calculator">
 					<img src="img/icons/calculator.svg" alt="Calculator"
 					draggable="false" ondragstart="return false;">
 					<p>calculator</p>
 				</div>
-				<div class="main__item">
+				<div class="main__item" data-tool="counter">
 					<img src="img/icons/counter.svg" alt="Counter" 
 					draggable="false" ondragstart="return false;">
 					<p>counter</p>
 				</div>
 			</div>
 		</main>
+		<div id="to-do" class="tool-block" style="display: none;">To-do tool content</div>
+		<div id="stopwatch" class="tool-block" style="display: none;">Stopwatch tool content</div>
+		<div id="calculator" class="tool-block" style="display: none;">Calculator tool content</div>
+		<div id="counter" class="tool-block" style="display: none;">Counter tool content</div>
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__info" >
@@ -58,6 +62,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/script.js"></script>
+	<script type="module" src="js/script.js"></script>
+	<script type="module" src="js/menu.js"></script>
 </body>
 </html>

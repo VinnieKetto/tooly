@@ -1,45 +1,24 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-	const icon = document.querySelector(".header__theme");
-	const main = document.querySelector(".main")
-	const mainImages = document.querySelectorAll(".main__item img");
-	const menu = document.querySelector(".header__menu");
-	const otherTools = document.querySelector(".header__shell")
-	const info = document.querySelector(".footer__info");
-	
-	// ----------------------------- // 
+import { toggleTheme } from './theme.js';
+import { toggleMenu } from './menu.js';
+import { setupHistoryAPI } from './navigation.js';
 
+export const mainTools = document.querySelectorAll(".main__item");
+export const main = document.querySelector(".main")
+export const menu = document.querySelector(".header__menu");
+export const otherTools = document.querySelector(".header__shell")
+export const icon = document.querySelector(".header__theme");
+export const mainImages = document.querySelectorAll(".main__item img");
+export const info = document.querySelector(".footer__info");
+
+document.addEventListener("DOMContentLoaded", () => {
 	// Toggle menu
-	if (menu && otherTools) {
-		menu.addEventListener("click", () => {
-			document.body.classList.toggle("lock");
-			menu.classList.toggle("active");
-			otherTools.classList.toggle("active");
-			main.classList.toggle("active");
-		});
-	}
+	toggleMenu();
 
 	// Toggle theme
-	if (icon && mainImages.length > 0 && menu && info) {
-		const setBrightness = (brightnessValue) => {
-			mainImages.forEach(image => {
-				image.style.filter = brightnessValue;
-			});
-			menu.style.filter = brightnessValue;
-		};
+	toggleTheme();
 
-		icon.addEventListener("click", () => {
-			document.body.classList.toggle("light");
-			if (document.body.classList.contains("light")) {
-				setBrightness("brightness(6.55%)");
-				icon.src = "img/icons/moon.svg";
-			} 
-			else {
-				setBrightness("none");
-				icon.src = "img/icons/sun.svg";
-			}
-		});
-	}
+	// Histroy API
+	setupHistoryAPI();
 });
-
