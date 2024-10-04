@@ -14,10 +14,10 @@
 		<header class="header">
 			<div class="header__container">
 				<div>
-					<img src="img/icons/sun.svg"  alt="Theme changer" class="header__theme" 
+					<img src="img/header/sun.svg"  alt="Theme changer" class="header__theme" 
 					draggable="false" ondragstart="return false;">
 				</div>
-				<img src="img/icons/menu.svg" alt="Extra menu" class="header__menu" 
+				<img src="img/header/menu.svg" alt="Extra menu" class="header__menu" 
 				draggable="false" ondragstart="return false;">
 				<div class="header__shell">
 					There will be other, less important tools
@@ -26,36 +26,48 @@
 		</header>
 		<main class="main">
 			<div class="main__container">
-				<div class="main__item" data-tool="to-do">
-					<img src="img/icons/to-do.svg" alt="To-do" 
-					draggable="false" ondragstart="return false;">
-					<p>to-do</p>
-				</div>
-				<div class="main__item" data-tool="stopwatch">
-					<img src="img/icons/stopwatch.svg" alt="Stopwatch" 
-					draggable="false" ondragstart="return false;">
-					<p>Stopwatch</p>
-				</div>
-				<div class="main__item" data-tool="calculator">
-					<img src="img/icons/calculator.svg" alt="Calculator"
-					draggable="false" ondragstart="return false;">
-					<p>calculator</p>
-				</div>
-				<div class="main__item" data-tool="counter">
-					<img src="img/icons/counter.svg" alt="Counter" 
-					draggable="false" ondragstart="return false;">
-					<p>counter</p>
-				</div>
+				<section class="main__items">
+					<div class="main__item" data-tool="to-do">
+						<img src="img/main/to-do.svg" alt="To-do" 
+						draggable="false" ondragstart="return false;">
+						<p>to-do</p>
+					</div>
+					<div class="main__item" data-tool="stopwatch">
+						<img src="img/main/stopwatch.svg" alt="Stopwatch" 
+						draggable="false" ondragstart="return false;">
+						<p>Stopwatch</p>
+					</div>
+					<div class="main__item" data-tool="calculator">
+						<img src="img/main/calculator.svg" alt="Calculator"
+						draggable="false" ondragstart="return false;">
+						<p>calculator</p>
+					</div>
+					<div class="main__item" data-tool="counter">
+						<img src="img/main/counter.svg" alt="Counter" 
+						draggable="false" ondragstart="return false;">
+						<p>counter</p>
+					</div>
+				</section>
+				<section class="main__tools">
+					<div id="to-do" class="main__tool to-do">
+						To-do tool content
+					</div>
+					<div id="stopwatch" class="main__tool stopwatch">
+						Stopwatch tool content
+					</div>
+					<div id="calculator" class="main__tool calculator">
+						Calculator tool content
+					</div>
+					<div id="counter" class="main__tool counter">
+						Counter tool content
+					</div>
+				</section>
 			</div>
 		</main>
-		<div id="to-do" class="tool-block" style="display: none;">To-do tool content</div>
-		<div id="stopwatch" class="tool-block" style="display: none;">Stopwatch tool content</div>
-		<div id="calculator" class="tool-block" style="display: none;">Calculator tool content</div>
-		<div id="counter" class="tool-block" style="display: none;">Counter tool content</div>
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__info" >
-					Made with <img src="img/icons/heart.svg" alt="Heart" 
+					Made with <img src="img/footer/heart.svg" alt="Heart" 
 					draggable="false" ondragstart="return false;"> by
 					<a href="https://github.com/VinnieKetto" target="_blank">VinnieKetto</a>
 				</div>

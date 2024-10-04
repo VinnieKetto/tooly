@@ -13,11 +13,11 @@ export function toggleTheme() {
 			document.body.classList.toggle("light");
 			if (document.body.classList.contains("light")) {
 				setBrightness("brightness(6.55%)");
-				icon.src = "img/icons/moon.svg";
+				icon.src = "img/header/moon.svg";
 			} 
 			else {
 				setBrightness("none");
-				icon.src = "img/icons/sun.svg";
+				icon.src = "img/header/sun.svg";
 			}
 		});
 	}

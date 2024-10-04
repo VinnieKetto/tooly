@@ -4,8 +4,9 @@ import { toggleTheme } from './theme.js';
 import { toggleMenu } from './menu.js';
 import { setupHistoryAPI } from './navigation.js';
 
-export const mainTools = document.querySelectorAll(".main__item");
-export const main = document.querySelector(".main")
+export const mainItem = document.querySelectorAll(".main__item");
+export const mainItems = document.querySelector(".main__items");
+export const mainTools = document.querySelector(".main__tools");
 export const menu = document.querySelector(".header__menu");
 export const otherTools = document.querySelector(".header__shell")
 export const icon = document.querySelector(".header__theme");

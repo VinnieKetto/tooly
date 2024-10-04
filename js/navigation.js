@@ -1,8 +1,7 @@
-import { mainTools } from './script.js';
+import { menu, mainItems, mainItem, mainTools } from './script.js';
 
 export function setupHistoryAPI() {
-	/* 
-  mainTools.forEach(tool => {
+  mainItem.forEach(tool => {
     tool.addEventListener("click", (e) => {
       const toolName = tool.getAttribute("data-tool");
       loadTool(toolName);
@@ -12,11 +11,12 @@ export function setupHistoryAPI() {
 
   function loadTool(toolName) {
     // Hide all main tools
-    document.querySelectorAll(".tool-block").forEach(block => block.style.display = "none");
+		mainItems.classList.toggle("active-right")
     // Show the selected tool block
     const toolBlock = document.getElementById(toolName);
     if (toolBlock) {
-      toolBlock.style.display = "block";
+			toolBlock.style.opacity = "1";
+			mainTools.classList.toggle("active");
     }
   }
 
@@ -32,5 +32,4 @@ export function setupHistoryAPI() {
   if (currentTool) {
     loadTool(currentTool);
   }
-	*/
 }
