@@ -63,7 +63,7 @@
 }
 
 .main__tools.active{
-	transform: translateX(0);
+	transform: translateX(0%);
 }
 
 .main__tool{
@@ -72,6 +72,10 @@
 	top: 0;
 	left: auto;
 	transition: all 0.2s ease;
+}
+
+.main__tool.active{
+	opacity: 1;
 }
 
 @media (max-width: 62.5rem) {

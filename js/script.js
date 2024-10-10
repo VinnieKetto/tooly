@@ -2,7 +2,7 @@
 
 import { toggleTheme } from './theme.js';
 import { toggleMenu } from './menu.js';
-import { setupHistoryAPI } from './navigation.js';
+import { setupHashNavigation } from './navigation.js';
 
 export const mainItem = document.querySelectorAll(".main__item");
 export const mainItems = document.querySelector(".main__items");
@@ -21,5 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	toggleTheme();
 
 	// Histroy API
-	setupHistoryAPI();
+	setupHashNavigation();
 });
