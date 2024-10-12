@@ -22,16 +22,38 @@
 }
 
 .header__menu{
+	display: flex;
+	align-items: center;
+	gap: 5px;
 	max-width: 4rem;
 	max-height: 4rem;
 	cursor: pointer;
 	z-index: 2;
 	transition: all 0.2s ease;
+	position: relative;
 }
 
 .header__menu.active{
 	transform: rotate(180deg);
 }
+
+.header__menu-arrow{
+	transition: all 0.1s ease;
+}
+
+.header__menu-arrow.active-right{
+	transform: translateX(14px);
+}
+
+.header__menu-back{
+	transition: all 0.1s ease;
+}
+
+.header__menu-back.active-right{
+	transform: translateX(-10px);
+	opacity: 0;
+}
+
 
 /* Other tools shell */
 

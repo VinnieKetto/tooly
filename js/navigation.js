@@ -1,49 +1,52 @@
-import { mainItems, mainItem, mainTools } from './script.js';
+import { mainItems, mainItem, mainTools, menuArrow, menuBack } from './script.js';
 
 export function setupHashNavigation() {
-    // Обрабатываем клик по иконке инструмента
-    mainItem.forEach(item => {
-        item.addEventListener('click', () => {
-            const tool = item.dataset.tool;
-            navigateToTool(tool);
-        });
-    });
+  // Processing a click on the tool icon
+  mainItem.forEach(item => {
+      item.addEventListener('click', () => {
+          const tool = item.dataset.tool;
+          navigateToTool(tool);
+      });
+  });
 
-    // Проверяем хэш при загрузке страницы
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Обрабатываем начальную загрузку
+  // Checking the hash on page load
+  window.addEventListener('hashchange', handleHashChange);
+  handleHashChange(); // Processing the initial load
+  // Navigating to a specific instrument via hash
+  function navigateToTool(tool) {
+      window.location.hash = `#${tool}`;
+  }
 
-    // Навигация к определенному инструменту через хэш
-    function navigateToTool(tool) {
-        window.location.hash = `#${tool}`;
-    }
+    // Handling the hash change
+  function handleHashChange() {
+      const tool = window.location.hash.replace('#', '');
+      if (tool) {
+          showTool(tool);
+      } else {
+          resetMainItems(); // Return to initial state
+      }
+  }
 
-    // Обрабатываем изменение хэша
-    function handleHashChange() {
-        const tool = window.location.hash.replace('#', '');
-        if (tool) {
-            showTool(tool);
-        } else {
-            resetMainItems(); // Возврат к начальному состоянию
-        }
-    }
+  // Tool demonstration
+  function showTool(tool) {
+      resetMainItems(); // Removing active classes
+      const toolElement = document.getElementById(tool);
+      if (toolElement) {
+					menuArrow.classList.add('active-right');
+					menuBack.classList.add('active-right');
+          mainItems.classList.add('active-right');
+					mainTools.classList.add('active');
+          toolElement.classList.add('active'); // Showing the right tool
+      }
+  }
 
-    // Показ инструмента
-    function showTool(tool) {
-        resetMainItems(); // Убираем активные классы
-        const toolElement = document.getElementById(tool);
-        if (toolElement) {
-            mainItems.classList.add('active-right');
-						mainTools.classList.add('active');
-            toolElement.classList.add('active'); // Показываем нужный инструмент
-        }
-    }
-
-    // Сброс к первоначальному состоянию
-    function resetMainItems() {
-        mainItems.classList.remove('active-right');
-        mainTools.querySelectorAll('.main__tool').forEach(tool => {
-            tool.classList.remove('active');
-        });
-    }
+  // Reset to original state
+  function resetMainItems() {
+			menuArrow.classList.remove('active-right');
+			menuBack.classList.remove('active-right');
+      mainItems.classList.remove('active-right');
+      mainTools.querySelectorAll('.main__tool').forEach(tool => {
+          tool.classList.remove('active');
+      });
+  }
 }
