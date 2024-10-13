@@ -1,4 +1,4 @@
-import { mainItems, menu, otherTools } from './script.js';
+import { mainItems, menu, otherTools, title } from './script.js';
 
 export function toggleMenu() {
 	// Check if there is a hash in the URL
@@ -22,6 +22,10 @@ function handleMenuToggle() {
 	menu.classList.toggle("active");
 	otherTools.classList.toggle("active");
 	mainItems.classList.toggle("active-left");
+	title.classList.toggle("active");
+	// Change the text depending on the state
+	title.textContent == "main tools" ? title.textContent = "extra tools": 
+	title.textContent = "main tools";
 }
 
 function goBack() {

@@ -36,8 +36,15 @@
 .footer__info a{
 	text-decoration: underline;
 	margin: 0 auto;
+	transition: all 0.1s ease;
+	border-radius: 2px;
 }
-
+.footer__info a:focus{
+	text-decoration: none;
+	padding: 2px 4px;
+	transform: scale(1.02);
+	outline: 2px solid;
+}
 /* Media queries */
 
 @media (max-width: 62.5rem) {

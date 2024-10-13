@@ -1,4 +1,4 @@
-import { mainItems, mainItem, mainTools, menuArrow, menuBack } from './script.js';
+import { mainItems, mainItem, mainTools, menuArrow, menuBack, title } from './script.js';
 
 export function setupHashNavigation() {
   // Processing a click on the tool icon

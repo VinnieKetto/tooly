@@ -8,6 +8,7 @@ export const mainItem = document.querySelectorAll(".main__item");
 export const mainItems = document.querySelector(".main__items");
 export const mainTools = document.querySelector(".main__tools");
 export const menu = document.querySelector(".header__menu");
+export const title = document.querySelector(".header__title");
 export const menuArrow = document.querySelector(".header__menu-arrow");
 export const menuBack = document.querySelector(".header__menu-back");
 export const otherTools = document.querySelector(".header__shell");
