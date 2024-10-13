@@ -2,12 +2,22 @@
 	--black: #101010;
 	--white: #f0f0f0;
 	--gray: #181818;
+
+	--main-1: #b37f00;
+	--main-2: #287a95;
+	--main-3: #ba2c14;
+	--main-4: #e86f2d;
 }
 
 .light{
 	--black: #f0f0f0;
 	--white: #101010;
 	--gray: #f8f8f8;
+
+	--main-1: #FFB600;
+	--main-2: #43AACC;
+	--main-3: #EA553C;
+	--main-4: #F4B999;
 }
 
 body{
