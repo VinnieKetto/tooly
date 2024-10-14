@@ -37,6 +37,8 @@ export function setupHashNavigation() {
           mainItems.classList.add('active-right');
 					mainTools.classList.add('active');
           toolElement.classList.add('active'); // Showing the right tool
+					title.classList.add('active-right');
+					title.textContent = tool;
       }
   }
 
@@ -45,6 +47,8 @@ export function setupHashNavigation() {
 			menuArrow.classList.remove('active-right');
 			menuBack.classList.remove('active-right');
       mainItems.classList.remove('active-right');
+			title.classList.remove('active-right');
+			title.textContent = "main tools";
       mainTools.querySelectorAll('.main__tool').forEach(tool => {
           tool.classList.remove('active');
       });

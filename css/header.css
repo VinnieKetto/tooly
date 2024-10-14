@@ -20,6 +20,12 @@
 	cursor: pointer;
 	z-index: 2;
 	position: relative;
+	transition: all 0.1s ease;
+	border-radius: 50%;
+}
+
+.header__theme:focus{
+	transform: scale(0.95);
 }
 
 .header__title{
@@ -68,6 +74,7 @@
 	gap: 0.25rem;
 	max-width: 4rem;
 	max-height: 4rem;
+	border-radius: 10px;
 	cursor: pointer;
 	z-index: 2;
 	transition: all 0.2s ease;
