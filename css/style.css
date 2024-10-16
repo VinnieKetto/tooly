@@ -3,3 +3,5 @@
 @import 'header.css';
 @import 'main.css';
 @import 'footer.css';
+@import 'tools/to-do.css';
+@import 'tools/stopwatch.css';

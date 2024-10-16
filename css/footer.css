@@ -1,5 +1,5 @@
 .footer {
-	padding: 0.625rem 0rem 4.6875rem 0rem;
+	padding: 0.625rem 0rem 2.1875rem 0rem;
 	position: fixed;
 	z-index: 2;
 	width: 100%;
@@ -48,10 +48,6 @@
 /* Media queries */
 
 @media (max-width: 62.5rem) {
-	.footer{
-		padding: 0.625rem 0rem 2.1875rem 0rem;
-	}
-
 	.footer__info {
 		max-width: 2.25rem;
 		max-height: 2.25rem;

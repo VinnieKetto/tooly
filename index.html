@@ -55,10 +55,26 @@
 				</section>
 				<section class="main__tools">
 					<div id="to-do" class="main__tool to-do">
-						To-do tool content
+						<div class="to-do__container">
+							<div class="to-do__content">
+								<input class="to-do__input" type="text" placeholder="Add an item">
+								<button class="to-do__button" onclick="addItem()">+</button>
+							</div>
+							<hr class="to-do__line"/>
+							<div class="to-do__items"></div>
+						</div>
 					</div>
 					<div id="stopwatch" class="main__tool stopwatch">
-						Stopwatch tool content
+						<div class="stopwatch__container">
+							<div class="stopwatch__display">
+								00:00:00:00
+							</div>
+							<div class="stopwatch__controls">
+								<button id="startBtn" onclick="start()">Start</button>
+								<button id="stopBtn" onclick="stop()">Stop</button>
+								<button id="resetBtn" onclick="reset()">Reset</button>
+							</div>
+						</div>
 					</div>
 					<div id="calculator" class="main__tool calculator">
 						Calculator tool content	
@@ -80,6 +96,5 @@
 		</footer>
 	</div>
 	<script type="module" src="js/script.js"></script>
-	<script type="module" src="js/menu.js"></script>
 </body>
 </html>

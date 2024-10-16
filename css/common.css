@@ -7,17 +7,25 @@
 	--main-2: #287a95;
 	--main-3: #ba2c14;
 	--main-4: #e86f2d;
+
+	--red: #ce1200;
+	--green: #32a40d;
+	--blue: #004ea7;
 }
 
 .light{
 	--black: #f0f0f0;
 	--white: #101010;
-	--gray: #f8f8f8;
+	--gray: #B9B8BD;
 
 	--main-1: #FFB600;
 	--main-2: #43AACC;
 	--main-3: #EA553C;
 	--main-4: #F4B999;
+
+	--red: #FF3B28;
+	--green: #48EB12;
+	--blue: #006FEF;
 }
 
 body{

@@ -1,0 +1,83 @@
+
+.stopwatch{
+	max-width: 100dvw;
+} 
+
+.stopwatch__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--white);
+	border-radius: 0.625rem;
+	padding: 1.875rem;
+	background-color: var(--gray);
+	margin-top: 9.5dvh;
+	max-width: 30.25rem;
+}
+
+.stopwatch__display {
+	font-size: 5rem;
+	text-shadow: 2px 2px 2px var(--white);
+	margin-bottom: 25px;
+}
+
+.stopwatch__controls button {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin: 5px;
+	min-width: 125px;
+	border: 2px solid var(--white);
+	border-radius: 5px;
+	transition: filter 0.2s ease;
+}
+.stopwatch__controls button:hover{
+	filter: brightness(1.2);
+}
+
+#startBtn {
+	background-color: var(--green);
+}
+#stopBtn {
+	background-color: var(--red);
+}
+#resetBtn {
+	background-color: var(--blue);
+}
+
+@media (max-width: 34.6875rem) {
+	.stopwatch__container {
+		padding: 1.4063rem;
+	}
+
+	.stopwatch__display {
+		font-size: 3.75rem;
+		margin-bottom: 12.5px;
+	}
+	.stopwatch__controls button {
+		font-size: 18px;
+		padding: 7.5px 15px;
+		min-width: 93.75px;
+	}
+}
+
+@media (max-width: 24.9937rem) {
+	.stopwatch__container{
+		min-width: 80%;
+	}
+	.stopwatch__controls {
+		display: flex;
+		flex-direction: column;
+		min-width: 100%;
+	}
+	.stopwatch__controls button {
+		min-width: 100%;
+	}
+}
+
+@media (max-width: 23.7437rem) {
+	.stopwatch__display {
+		font-size: 40px;
+		margin-bottom: 12.5px;
+	}
+}
